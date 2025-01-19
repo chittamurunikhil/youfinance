@@ -88,8 +88,7 @@ def load_and_display_pl(ticker1, ticker2):
 
 
         # GPT-3 Integration
-        openai.api_key = "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" 
-
+        openai.api_key = ""
         # Prepare data for GPT-3
         ticker1_summary = f"**{ticker1}**\n\n" \
                          f"**Vertical Analysis:**\n{ticker_1_vertical.to_markdown()}\n\n" \
