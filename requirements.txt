@@ -4,3 +4,4 @@ yfinance
 streamlit
 scipy
 scikit-learn
+textblob
