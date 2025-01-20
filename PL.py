@@ -3,7 +3,7 @@ import pandas as pd
 import yfinance as yf
 import seaborn as sns
 import matplotlib.pyplot as plt
-import openai
+# import openai
 
 
 def load_and_display_pl(ticker1, ticker2):
@@ -118,9 +118,9 @@ def load_and_display_pl(ticker1, ticker2):
     #     st.header("GPT-3 Analysis")
     #     st.write(response.choices[0].text)
 
-    # except Exception as e:
-    #     st.error(f"An error occurred: {e}")
-    # return load_and_display_pl
+    except Exception as e:
+        st.error(f"An error occurred: {e}")
+    return load_and_display_pl
 
     
 
