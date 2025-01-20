@@ -87,39 +87,39 @@ def load_and_display_pl(ticker1, ticker2):
 
 
 
-        # GPT-3 Integration
-        openai.api_key = ""
-        # Prepare data for GPT-3
-        ticker1_summary = f"**{ticker1}**\n\n" \
-                         f"**Vertical Analysis:**\n{ticker_1_vertical.to_markdown()}\n\n" \
-                         f"**Horizontal Analysis:**\n{ticker1_pct_change.to_markdown()}\n\n" \
-                         f"**Key Ratios:**\n{Profit_Margins_1.to_markdown()}\n\n"
-        ticker2_summary = f"**{ticker2}**\n\n" \
-                         f"**Vertical Analysis:**\n{ticker_2_vertical.to_markdown()}\n\n" \
-                         f"**Horizontal Analysis:**\n{ticker2_pct_change.to_markdown()}\n\n" \
-                         f"**Key Ratios:**\n{Profit_Margins_2.to_markdown()}\n\n"
+    #     # GPT-3 Integration
+    #     openai.api_key = ""
+    #     # Prepare data for GPT-3
+    #     ticker1_summary = f"**{ticker1}**\n\n" \
+    #                      f"**Vertical Analysis:**\n{ticker_1_vertical.to_markdown()}\n\n" \
+    #                      f"**Horizontal Analysis:**\n{ticker1_pct_change.to_markdown()}\n\n" \
+    #                      f"**Key Ratios:**\n{Profit_Margins_1.to_markdown()}\n\n"
+    #     ticker2_summary = f"**{ticker2}**\n\n" \
+    #                      f"**Vertical Analysis:**\n{ticker_2_vertical.to_markdown()}\n\n" \
+    #                      f"**Horizontal Analysis:**\n{ticker2_pct_change.to_markdown()}\n\n" \
+    #                      f"**Key Ratios:**\n{Profit_Margins_2.to_markdown()}\n\n"
 
-        prompt = f"Compare and contrast the financial performance of the two companies based on their P&L data:\n\n" \
-                 f"{ticker1_summary}\n\n" \
-                 f"{ticker2_summary}\n\n" \
-                 f"Provide insights into their profitability, growth trends, and operational efficiency."
+    #     prompt = f"Compare and contrast the financial performance of the two companies based on their P&L data:\n\n" \
+    #              f"{ticker1_summary}\n\n" \
+    #              f"{ticker2_summary}\n\n" \
+    #              f"Provide insights into their profitability, growth trends, and operational efficiency."
 
-        # Generate response from GPT-3
-        response = openai.Completion.create(
-            engine="text-ada-001",  # Choose an appropriate engine
-            prompt=prompt,
-            max_tokens=1024,
-            n=1,
-            stop=None,
-            temperature=0.7
-        )
+    #     # Generate response from GPT-3
+    #     response = openai.Completion.create(
+    #         engine="text-ada-001",  # Choose an appropriate engine
+    #         prompt=prompt,
+    #         max_tokens=1024,
+    #         n=1,
+    #         stop=None,
+    #         temperature=0.7
+    #     )
 
-        # Display GPT-3's analysis
-        st.header("GPT-3 Analysis")
-        st.write(response.choices[0].text)
+    #     # Display GPT-3's analysis
+    #     st.header("GPT-3 Analysis")
+    #     st.write(response.choices[0].text)
 
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
+    # except Exception as e:
+    #     st.error(f"An error occurred: {e}")
     return load_and_display_pl
 
     
