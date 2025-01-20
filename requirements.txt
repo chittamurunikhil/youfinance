@@ -5,3 +5,4 @@ streamlit
 scipy
 scikit-learn
 textblob
+tensorflow
