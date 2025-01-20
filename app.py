@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 # from PL import load_and_display_pl
 from Balance_sheet import load_and_display_BS
 from Cashflows import load_and_display_cashflows
-from news import classify_sentiment
+# from news import classify_sentiment
 from daily_prices import load_and_display_prices
 from macd_prices import load_and_display_macd
 
@@ -19,7 +19,7 @@ def main():
 
     # Tabbed interface
     # tab1, 
-    tab2, tab3, tab4, tab5, tab6  = st.tabs([  "Balance Sheet", "Cashflow", 'News', 'Compare Prices', "MACD Indicatords"])
+    tab2, tab3, tab4, tab5, tab6  = st.tabs([  "Balance Sheet", "Cashflow", 'Compare Prices', "MACD Indicatords"])
 
     # with tab1:
     # # Button to trigger data loading and display
