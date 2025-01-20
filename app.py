@@ -19,7 +19,7 @@ def main():
 
     # Tabbed interface
     # tab1, 
-    tab2, tab3, tab4, tab5, tab6  = st.tabs([  "Balance Sheet", "Cashflow", 'Compare Prices', "MACD Indicatords"])
+    tab2, tab3, tab5, tab6  = st.tabs([  "Balance Sheet", "Cashflow", 'Compare Prices', "MACD Indicatords"])
 
     # with tab1:
     # # Button to trigger data loading and display
