@@ -120,7 +120,7 @@ def load_and_display_pl(ticker1, ticker2):
 
     # except Exception as e:
     #     st.error(f"An error occurred: {e}")
-    return load_and_display_pl
+    # return load_and_display_pl
 
     
 
