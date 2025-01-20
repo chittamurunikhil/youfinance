@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import yfinance as yf
 import plotly.graph_objects as go
-from PL import load_and_display_pl
+# from PL import load_and_display_pl
 from Balance_sheet import load_and_display_BS
 from Cashflows import load_and_display_cashflows
 from news import classify_sentiment
@@ -18,12 +18,13 @@ def main():
     ticker2 = st.text_input("Enter Ticker Symbol 2")
 
     # Tabbed interface
-    tab1, tab2, tab3, tab4, tab5, tab6  = st.tabs([ "Profit & loss", "Balance Sheet", "Cashflow", 'News', 'Compare Prices', "MACD Indicatords"])
+    # tab1, 
+    tab2, tab3, tab4, tab5, tab6  = st.tabs([  "Balance Sheet", "Cashflow", 'News', 'Compare Prices', "MACD Indicatords"])
 
-    with tab1:
-    # Button to trigger data loading and display
-      if st.button("Load and Compare Profit and loss statement"):
-        load_and_display_pl(ticker1, ticker2)
+    # with tab1:
+    # # Button to trigger data loading and display
+    #   if st.button("Load and Compare Profit and loss statement"):
+    #     load_and_display_pl(ticker1, ticker2)
 
     with tab2:
     # Button to trigger data loading and display the Balance sheets Ratios
