@@ -14,11 +14,13 @@ def main():
     # st.title("Compare Companies fundamental Statements")
 
     # Using Markdown to make the title bold
-    st.markdown("# **ANALYSE YOUR BETS**")
+    st.markdown("# **SURF THROUGH YOUR STOCKS**")
+    
 
     # User input for ticker symbols
-    ticker1 = st.text_input("Enter Ticker Symbol 1")
-    ticker2 = st.text_input("Enter Ticker Symbol 2")
+    
+    ticker1 = st.text_input("Your Yahoo Ticker Symbol-1")
+    ticker2 = st.text_input("Your Yahoo Ticker Symbol-2")
 
     # Tabbed interface
     tab1, tab2, tab3, tab5, tab6  = st.tabs([  "P/L Statement","Balance Sheet", "Cashflow", 'Compare Prices', "MACD Indicatords"])
@@ -64,6 +66,38 @@ def main():
       
        if st.button("Load and Compare MACD Indicators"): 
         load_and_display_macd(ticker1, ticker2, user_inputs)
+
+
+    
+
+
+
+    # Add the footer with HTML
+    st.markdown(
+        """
+        <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 10px;
+        }
+        </style>
+        <div class="footer">
+            <p>Made with ❤️ by TJ and Auttribe Community</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    
+    # Ensure that the layout does not extend beyond the footer
+    st.write("\n" * 10)
+
+
 
             
 
