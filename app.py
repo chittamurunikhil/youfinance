@@ -11,7 +11,10 @@ from macd_prices import load_and_display_macd
 
 
 def main():
-    st.title("Compare Companies fundamental Statements")
+    # st.title("Compare Companies fundamental Statements")
+
+    # Using Markdown to make the title bold
+    st.markdown("# **ANALYSE YOUR INVESTMENTS**")
 
     # User input for ticker symbols
     ticker1 = st.text_input("Enter Ticker Symbol 1")
